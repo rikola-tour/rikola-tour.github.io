@@ -1,0 +1,323 @@
+/*General*/
+
+* {
+  font-family: barlow-regular;
+  font-size: large;
+}
+
+body {
+  background-image: url(../graphics/other/line-background.jpg);
+  background-size: 400px;
+  background-repeat: repeat;
+}
+
+.barlow-thin {
+  font-family: barlow-thin;
+}
+
+.barlow-bold {
+  font-family: barlow-bold;
+}
+
+@font-face {
+  font-family: 'barlow-thin';
+  src: url(../font/barlow-thin.ttf)
+}
+
+@font-face {
+  font-family: 'barlow-regular';
+  src: url(../font/barlow-regular.ttf)
+}
+
+@font-face {
+  font-family: 'barlow-bold';
+  src: url(../font/barlow-bold.ttf)
+}
+
+.bla-border {
+  border: solid 1px black;
+}
+
+.blu-border {
+  border: solid 1px blue
+}
+
+.section-text {
+  font-size: clamp(20px, 5vw, 30px);
+  font-weight: bold;
+  text-align: center;
+  margin-top: clamp(24px, 7vw, 46px);
+}
+
+.line {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: clamp(5px, 2vw, 10px);
+  margin-bottom: clamp(20px, 6vw, 40px);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: clamp(35px, 6vw, 45px);
+  right: clamp(30px, 6vw, 45px);
+}
+
+.whatsapp-float-logo {
+  height: clamp(40px, 8vw, 60px);
+  width: clamp(40px, 8vw, 60px);
+}
+
+/*Logo*/
+
+.menu-logo {
+  margin: clamp(10px, 3vw, 20px) clamp(10px, 3vw, 20px);
+  position: relative;
+}
+
+.logo {
+  width: clamp(150px, 40vw, 200px);
+  height: auto;
+}
+
+.since-text {
+  font-size: clamp(0.6rem, 4vw, 1.2rem);
+  position: absolute;
+  right: 5px;
+  bottom: 0px;
+}
+
+/*Slider*/
+
+.image-menu {
+  border: 2px solid rgb(36, 36, 92);
+  background-image: url(../graphics/other/opera-house.jpg);
+  background-position: center;
+  padding: 20px 30px 30px 30px;
+}
+
+.label-text {
+  font-size: clamp(30px, 8vw, 50px);
+  color: white; text-shadow: 0px 0px 15px black;
+  margin-bottom: 20px;
+}
+
+#slider-menu {
+  position: relative;
+  width: 500px;
+  height: 265px;
+  overflow: hidden;
+}
+
+#slider-menu ul li img {
+  width: 500px;
+  height: 265px;
+}
+
+#slider-menu ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+
+#slider-menu ul li {
+  position: relative;
+  height: 100%;
+  float: left;
+}
+
+#slider-menu #slider-prev-button, #slider-menu #slider-next-button {
+  width: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 150ms ease;
+}
+#slider-menu #slider-prev-button:hover, #slider #slider-next-button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0;
+}
+#slider-menu #slider-prev-button {
+  left: 8px;
+}
+#slider-menu #slider-next-button {
+  right: 8px;
+}
+
+@media only screen and (max-width:600px) {
+  #slider-menu {
+    width: 400px;
+    height: 212px;
+  }
+  #slider-menu ul li img {
+    width: 400px;
+    height: 212px;
+  }
+  #slider-menu #slider-prev-button, #slider-menu #slider-next-button {
+    font-size: 1.25rem;
+  }
+  #slider-menu #slider-prev-button {
+    left: -2px;
+  }
+  #slider-menu #slider-next-button {
+    right: -2px;
+  }
+  }
+
+@media only screen and (max-width:500px) {
+#slider-menu {
+  width: 300px;
+  height: 159px;
+}
+#slider-menu ul li img {
+  width: 300px;
+  height: 159px;
+}
+#slider-menu #slider-prev-button, #slider-menu #slider-next-button {
+  font-size: 1rem;
+}
+#slider-menu #slider-prev-button {
+  left: -6px;
+}
+#slider-menu #slider-next-button {
+  right: -6px;
+}
+}
+
+@media only screen and (max-width:380px) {
+  #slider-menu {
+    width: 275px;
+    height: 146px;
+  }
+  #slider-menu ul li img {
+    width: 275px;
+    height: 146px;
+  }
+  #slider-menu #slider-prev-button, #slider-menu #slider-next-button {
+    font-size: 0.9rem;
+  }
+  #slider-menu #slider-prev-button {
+    left: -7px;
+  }
+  #slider-menu #slider-next-button {
+    right: -7px;
+  }
+  }
+
+/*Menu Jasa*/
+
+.menu-jasa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: clamp(15px, 3vw, 20px);
+  text-align: center;
+  margin-bottom: 6px;
+  padding: 0px 10px;
+}
+
+.menu-jasa > div {
+  color: white;
+  padding: clamp(12px, 3vw, 20px);
+  box-shadow: clamp(4px, 1vw, 6px) clamp(0.1px, 1vw, 6px) 0px 0px rgb(88, 88, 216);
+  background-color: rgb(36, 36, 92);
+}
+
+.jasa-logo {
+  width: clamp(20px, 6vw, 40px);
+  margin-bottom: clamp(2.5px, 0.6vw, 4px);
+}
+
+.jasa-text {
+  font-size: clamp(0.6rem, 3.5vw, 1rem);
+}
+
+/*Gallery*/
+
+.menu-gallery {
+  margin-left: clamp(8px, 3vw, 20px);
+  margin-right: clamp(12px, 3vw, 28px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: clamp(20px, 3vw, 40px);
+}
+
+.menu-gallery > img {
+  border: solid clamp(2px, 0.6vw, 4px) rgb(36, 36, 92);
+  box-shadow: clamp(4px, 0.6vw, 8px)  clamp(4px, 0.6vw, 8px) 0px 0px rgb(88, 88, 216);
+}
+
+/*Footer*/
+
+.menu-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: clamp(20px, 6vw, 40px);;
+  margin-top: clamp(40px, 12vw, 80px);
+  padding: clamp(15px, 4.5vw, 30px) clamp(20px, 6vw, 40px) clamp(40px, 9vw, 60px) clamp(20px, 6vw, 40px);
+  color: white;
+  background-color: rgb(30, 30, 80);
+}
+
+.footer-option {
+  margin-bottom: clamp(3px, 0.9vw, 6px);
+}
+
+.footer-section-text {
+  font-size: clamp(18px, 5vw, 26px);
+  margin-left: clamp(3px, 0.9vw, 6px);
+}
+
+.footer-logo {
+  height: clamp(12px, 4vw, 20px);
+}
+
+.footer-text > div {
+  font-size: clamp(0.6rem, 3.5vw, 1rem);
+}
+
+.footer-break {
+  margin-top: clamp(10px, 3vw, 20px);
+}
+
+.map-section {
+  justify-self: end;
+}
+
+.map {
+  border: 2px solid white;
+  padding: 2px;
+  width: 300px;
+  height: 300px;
+}
+
+@media only screen and (max-width:800px) {
+  .menu-footer {
+    grid-template-columns: 1fr;
+  }
+  .map-section {
+    justify-self: start;
+  }
+  .map {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .map {
+    width: 240px;
+    height: 240px;
+  }
+}
